@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/optHome"
+        android:title="Home"
+        android:icon="@drawable/home_24"
+        />
+    <item
+        android:id="@+id/optAbout"
+        android:title="About Us"
+        android:icon="@drawable/about_us_1"
+        />
+    <item
+        android:id="@+id/optContact"
+        android:title="Contact Us"
+        android:icon="@drawable/contacts_24"
+        />
+    <item
+        android:id="@+id/optRecyclerView"
+        android:title="RecyclerView "
+        android:icon="@drawable/recycling_view_24"
+        />
+    <item
+        android:id="@+id/optNestedRecyclerView"
+        android:title="Nested RecyclerView "
+        android:icon="@drawable/nested_recycler_24"
+        />
+    <item
+        android:id="@+id/optPagination"
+        android:title="Pagination "
+        android:icon="@drawable/pagination_24"
+        />
+
+    <item
+        android:id="@+id/optViewBinding"
+        android:title="View Binding "
+        android:icon="@drawable/arrow_circle_right_24"
+        />
+    <item
+        android:id="@+id/optGallery"
+        android:title="Gallery "
+        android:icon="@drawable/arrow_circle_right_24"
+        />
+</menu>

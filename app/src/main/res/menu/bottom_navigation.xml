@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/optAbout2"
+        android:title="About Us"
+        android:icon="@drawable/about_us_1"
+        />
+    <item
+        android:id="@+id/optHome2"
+        android:title="Home"
+        android:icon="@drawable/home_24"
+        />
+    <item
+        android:id="@+id/optContact2"
+        android:title="Contact Us"
+        android:icon="@drawable/contacts_24"
+        />
+</menu>
