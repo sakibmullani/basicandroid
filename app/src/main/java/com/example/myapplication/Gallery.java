@@ -66,6 +66,8 @@ public class Gallery extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
     private boolean checkCameraPermission() {
