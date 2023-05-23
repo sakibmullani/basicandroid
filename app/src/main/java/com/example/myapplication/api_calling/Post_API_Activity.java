@@ -96,7 +96,7 @@ public class Post_API_Activity extends AppCompatActivity {
                 DataModal_POST responseFromAPI = response.body();
 
                 // on below line we are getting our data from modal class and adding it to our string.
-                String responseString = "Response Code : " + response.code() + "\nName : " + responseFromAPI.getName() + "\n" + "Job : " + responseFromAPI.getJob();
+                String responseString = "Response Code : " + response.code() + "\n Name : " + responseFromAPI.getName() + "\n" + "Job : " + responseFromAPI.getJob();
 
                 // below line we are setting our
                 // string to our text view.
