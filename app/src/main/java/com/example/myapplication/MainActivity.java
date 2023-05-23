@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -15,8 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.example.myapplication.api_calling.MainActivity_API;
+import com.example.myapplication.api_calling.Post_API_Activity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -113,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
                 else if (id==R.id.optGallery){
 
                     startActivity(new Intent(MainActivity.this, Gallery.class));
+
+                }
+                else if (id==R.id.optGetAPI){
+
+                    startActivity(new Intent(MainActivity.this, MainActivity_API.class));
+
+                }
+                else if (id==R.id.optPostAPI){
+
+                    startActivity(new Intent(MainActivity.this, Post_API_Activity.class));
 
                 }
                 else {

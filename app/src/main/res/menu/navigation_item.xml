@@ -42,4 +42,14 @@
         android:title="Gallery "
         android:icon="@drawable/arrow_circle_right_24"
         />
+    <item
+        android:id="@+id/optGetAPI"
+        android:title="Get -API "
+        android:icon="@drawable/arrow_circle_right_24"
+        />
+    <item
+        android:id="@+id/optPostAPI"
+        android:title="Post -API "
+        android:icon="@drawable/arrow_circle_right_24"
+        />
 </menu>
