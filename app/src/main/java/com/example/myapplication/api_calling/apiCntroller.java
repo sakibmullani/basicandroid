@@ -1,37 +1,30 @@
 package com.example.myapplication.api_calling;
 
+import com.example.myapplication.api_calling.apiSet;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class apiCntroller {
-    private  static  final  String url ="https://jsonplaceholder.typicode.com/";
-    private  static  apiCntroller clientObject;
-    private  static Retrofit retrofit;
+    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
+    private static apiCntroller instance;
+    private Retrofit retrofit;
 
-    apiCntroller(){
-
-        retrofit =new Retrofit.Builder()
-                .baseUrl(url)
+    private apiCntroller() {
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
 
-    public  static  synchronized  apiCntroller getInstance(){
-
-        if (clientObject==null){
-
-            clientObject=new apiCntroller();
-
+    public static synchronized apiCntroller getInstance() {
+        if (instance == null) {
+            instance = new apiCntroller();
         }
-        return clientObject;
-
+        return instance;
     }
 
-    apiSet getApiALL(){
-        return  retrofit.create(apiSet.class);
-
+    public apiSet getApiALL() {
+        return retrofit.create(apiSet.class);
     }
-
-
-
 }
