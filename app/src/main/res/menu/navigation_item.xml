@@ -44,7 +44,7 @@
         />
     <item
         android:id="@+id/optGetAPI"
-        android:title="Get -API "
+        android:title="Get and Delete -API "
         android:icon="@drawable/arrow_circle_right_24"
         />
     <item
@@ -52,4 +52,5 @@
         android:title="Post -API "
         android:icon="@drawable/arrow_circle_right_24"
         />
+
 </menu>

@@ -15,14 +15,11 @@ import java.util.List;
 
 public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
 
-    private List<responseModel> data;
+    private List<responseModel> dataList;
     private OnDeleteClickListener onDeleteClickListener;
 
-    public myAdapter(List<responseModel> data) {
-        this.data = data;
-    }
-
-    public void setOnDeleteClickListener(OnDeleteClickListener onDeleteClickListener) {
+    public myAdapter(List<responseModel> dataList, OnDeleteClickListener onDeleteClickListener) {
+        this.dataList = dataList;
         this.onDeleteClickListener = onDeleteClickListener;
     }
 
@@ -35,43 +32,38 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        responseModel item = data.get(position);
-        holder.bind(item);
+        holder.titleId.setText(dataList.get(position).getTitle());
+        holder.idNumber.setText(String.valueOf(dataList.get(position).getId()));
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return dataList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private TextView idNumber, titleId;
-        private ImageView deleteSymbol;
+        private TextView idNumber;
+        private TextView titleId;
+        private ImageView deleteIcon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             idNumber = itemView.findViewById(R.id.idNumber);
             titleId = itemView.findViewById(R.id.titleId);
-            deleteSymbol = itemView.findViewById(R.id.delete_API);
+            deleteIcon = itemView.findViewById(R.id.delete_API);
+
+            deleteIcon.setOnClickListener(this);
         }
 
-        public void bind(responseModel item) {
-            idNumber.setText(item.getId());
-            titleId.setText(item.getTitle());
-
-            deleteSymbol.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onDeleteClickListener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            onDeleteClickListener.onDeleteClick(position);
-                        }
-                    }
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.delete_API) {
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    onDeleteClickListener.onDeleteClick(position);
                 }
-            });
+            }
         }
     }
 

@@ -21,38 +21,38 @@
             >
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginStart="11dp"
-                android:orientation="vertical"
-                >
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
                 <TextView
+                    android:id="@+id/idNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idNumber"
                     android:text="Contact"
                     android:textSize="22sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/titleId"
+                    android:layout_width="305dp"
+                    android:layout_height="wrap_content"
                     android:text="Contact Number"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    />
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/delete_API"
-                    android:src="@drawable/ic_delete_24"
-                    android:layout_gravity="center"
-                    />
+                    android:textStyle="bold" />
+
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/delete_API"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_delete_24" />
 
 
         </LinearLayout>
