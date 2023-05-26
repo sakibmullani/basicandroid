@@ -19,10 +19,24 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".api_calling.BlankActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".api_calling.Update_API_Activity"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".api_calling.MainActivity_API"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -15,8 +15,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.myapplication.api_calling.BlankActivity;
 import com.example.myapplication.api_calling.MainActivity_API;
 import com.example.myapplication.api_calling.Post_API_Activity;
+import com.example.myapplication.api_calling.Update_API_Activity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -125,13 +127,17 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, Post_API_Activity.class));
 
                 }
+                else if (id==R.id.optPutAPI){
+
+                    startActivity(new Intent(MainActivity.this, Update_API_Activity.class));
+
+                }
                 else {
                     loadFragment(new firstFragment(),0);
 
                 }
 
                 drawerLayout.closeDrawer(GravityCompat.START);
-
 
                 return true;
             }
