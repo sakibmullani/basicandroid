@@ -15,9 +15,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.myapplication.api_calling.BlankActivity;
 import com.example.myapplication.api_calling.MainActivity_API;
 import com.example.myapplication.api_calling.Post_API_Activity;
+import com.example.myapplication.api_calling.ToolTip_activity_Main;
 import com.example.myapplication.api_calling.Update_API_Activity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -130,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
                 else if (id==R.id.optPutAPI){
 
                     startActivity(new Intent(MainActivity.this, Update_API_Activity.class));
+
+                }
+                else if (id==R.id.optToolTip){
+
+                    startActivity(new Intent(MainActivity.this, ToolTip_activity_Main.class));
 
                 }
                 else {

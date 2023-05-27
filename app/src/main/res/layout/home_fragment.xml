@@ -12,11 +12,10 @@
 
     >
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/btn_ToolTip"
         android:layout_width="165dp"
         android:layout_height="70dp"
-        android:background="#F32222"
         android:gravity="center"
         android:text="Home"
         android:textColor="@color/white"

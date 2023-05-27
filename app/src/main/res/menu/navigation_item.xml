@@ -57,5 +57,10 @@
         android:title="Put and Patch -API "
         android:icon="@drawable/arrow_circle_right_24"
         />
+    <item
+        android:id="@+id/optToolTip"
+        android:title="ToolTip"
+        android:icon="@drawable/arrow_circle_right_24"
+        />
 
 </menu>

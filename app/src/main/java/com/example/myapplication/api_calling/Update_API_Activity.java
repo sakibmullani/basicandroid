@@ -93,7 +93,7 @@ public class Update_API_Activity extends AppCompatActivity {
 
                 Update_Model responseFromApi =response.body();
 
-                String responseString =                     "Response Code : "
+                         String responseString = "Response Code : "
                                                             + response.code() +
                                                              "\n User Id : "
                                                             + responseFromApi.getUserId() +
@@ -103,10 +103,6 @@ public class Update_API_Activity extends AppCompatActivity {
                                                             + responseFromApi.getBody();
 
                 responseTV.setText(responseString);
-
-
-
-
 
 
             }

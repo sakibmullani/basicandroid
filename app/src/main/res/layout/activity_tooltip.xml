@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".api_calling.ToolTip_activity_Main">
+
+
+    <Button
+        android:id="@+id/id_toolTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display ToolTip"
+        android:textSize="20sp"
+        android:tooltipText="Tooltip text goes here"
+        app:layout_constraintBottom_toTopOf="@+id/id_toolTip2"
+        app:layout_constraintEnd_toEndOf="@+id/id_toolTip2"
+        app:layout_constraintStart_toStartOf="@+id/id_toolTip2"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <Button
+        android:id="@+id/id_toolTip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Custom ToolTip"
+        android:textSize="20sp"
+        android:tooltipText="Tooltip text goes here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_toolTip"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
